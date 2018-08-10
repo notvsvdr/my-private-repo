@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+header {
+    background: rgb(200, 200, 200);
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    padding: 5px;
+}
+
+header #form {
+    display: flex;
+    justify-content: center;
+}
+
+button, input {
+    border: 1px solid #FAC090;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background: rgb(239, 239, 239);
+}
+
+button:hover {
+    background: #FF7C81;
+    cursor: pointer;
+}
+
+#container {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#container table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 50%;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+#container table button {
+    margin-top: 20px;
+}
+
+#container table td {
+    padding: 5px;
+}
+
+#container table tr:nth-child(odd) {
+    background: rgb(239, 239, 239);
+}

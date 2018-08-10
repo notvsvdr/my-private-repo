@@ -1,0 +1,109 @@
+:root {
+  --main-color: #1C1C1F;
+  --font-color: #A19E86;
+  --tank-font-color: #D7D2B7;
+  --hover-color: #2C2C2C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+  font-weight: bold;
+}
+
+html {
+  background: var(--main-color);
+  color: var(--font-color);
+}
+
+#thumbnails div {
+  display: inline-block;
+  width: 15%;
+  margin: 1%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#thumbnails h1 {
+  margin: 10px;
+}
+
+#thumbnails div:hover {
+  background: var(--hover-color);
+}
+
+#thumbnails .tank-image {
+  width: 100%;
+}
+
+#thumbnails p {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#thumbnails .country-image {
+  height: 1em;
+}
+
+#thumbnails span {
+  text-transform: uppercase;
+}
+
+#thumbnails .level {
+  color: var(--tank-font-color);
+}
+
+#tank-details {
+  margin: 10px;
+}
+
+#tank-details h1 {
+  margin: 10px;
+}
+
+#tank-details .level-lowercase {
+  text-transform: lowercase;
+}
+
+#tank-details span {
+  text-transform: uppercase;
+}
+
+#tank-details div {
+  float: left;
+  width: 50%;
+}
+
+#tank-details div h2 {
+  margin: 10px;
+}
+
+#table-details div img {
+  width: 100%;
+}
+
+#tank-details table {
+  float: right;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+#tank-details table caption {
+  float: left;
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+#tank-details td {
+  padding: 10px;
+  border: 1px solid var(--font-color);
+}
+
+#tank-details a {
+  text-decoration: none;
+  display: block;
+  color: var(--font-color);
+}

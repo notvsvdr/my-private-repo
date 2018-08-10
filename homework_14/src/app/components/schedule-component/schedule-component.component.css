@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+
+.main-container {
+    margin: 0 auto;
+    width: 800px;
+}
+
+.add-button {
+    margin: 10px;
+    padding: 5px;
+}
+
+.headers {
+    display: block;
+    background: #e6e6e6;
+}
+
+.columns-header {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    margin: 5px;
+    font-weight: bold;
+}

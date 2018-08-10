@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-heading {
+    text-align: center;
+}
+
+.posts-container {
+    float: left;
+    width: 65%;
+    margin: 40px;
+    padding: 20px;
+}
+
+.photo {
+    width: 100%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.categories span {
+    margin-right: 5px;
+    color: blue;
+}
+
+.error {
+    color: red;
+}
+
+.categories-container {
+    margin: 40px;
+    padding: 8px;
+    width: 35%;
+    float: right;
+    width: 200px;
+    border: 1px solid #a5a5a5;
+}
+
+.categories-container ul {
+    list-style-type: none;
+}
+
+.categories-container ul li {
+    margin: 5px;
+    color: #516bff;
+    cursor: pointer;
+}
+
+.categories-container ul li:hover {
+    color: #0026ff;
+}
+
+.categories-container input {
+    padding: 5px;
+    margin: 5px;
+}
+
+.add-postdata button {
+    margin-top: 30px;
+    padding: 10px;
+    background: #dddddd;
+    border: none;
+    cursor: pointer;
+}
+
+.add-postdata .field {
+    margin: 5px;
+}
+
+.add-postdata .field input {
+    float: right;
+}
+
+.post-button {
+    margin: 5px;
+    color: #516bff;
+    cursor: pointer;
+}
+
+.post-button:hover {
+    color: #0026ff;
+}
+
+.tags {
+    margin-left: 5px;
+    color: #0026ff;
+}
+
+.post-error {
+    color: red;
+}

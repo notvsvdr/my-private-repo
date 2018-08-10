@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #dcbb9a; }
+  body #content {
+    width: 960px;
+    margin: 10px auto;
+    padding: 5px 20px;
+    background-color: #ffffff; }
+    body #content h1 {
+      text-align: center;
+      color: #893c00; }
+    body #content h2 {
+      color: #893c00; }
+    body #content a {
+      color: #3d70a1; }
+    body #content img.img-left {
+      border: 2px solid #893c00;
+      padding: 2px;
+      margin: 0 15px 10px 0;
+      float: left; }
+    body #content img.img-right {
+      border: 2px solid #893c00;
+      padding: 2px;
+      margin: 0 0 0 15px;
+      float: right; }
+    body #content .brief {
+      background-color: #fadcba;
+      display: block;
+      float: left;
+      width: 385px;
+      margin: 0 15px 0 0;
+      padding: 20px; }
+    body #content table {
+      width: 95%;
+      text-align: left;
+      border-collapse: collapse; }
+      body #content table caption {
+        text-align: right; }
+      body #content table tr th {
+        text-transform: uppercase;
+        font-weight: normal;
+        background-color: #e0e0e0;
+        padding: 12px 15px;
+        border: 1px solid #ffffff; }
+      body #content table tr td {
+        border-bottom: 1px solid #e0e0e0;
+        padding: 12px 15px; }
+        body #content table tr td a {
+          color: #3d70a1; }
+    body #content form {
+      color: #808080; }
+      body #content form input, body #content form textarea {
+        width: 100%;
+        border: 1px solid #808080;
+        padding: 5px;
+        margin: 5px 0; }
+      body #content form #usernameData {
+        width: 100%; }
+        body #content form #usernameData #firstName, body #content form #usernameData #lastName {
+          width: 48%;
+          display: inline-block; }
+        body #content form #usernameData #lastName {
+          margin-left: 34px; }
+      body #content form button {
+        margin: 15px 0;
+        padding: 10px 60px;
+        font-size: 1.5em;
+        color: #3d70a1;
+        border: 1px solid #3d70a1;
+        background-color: #ffffff; }
+
+/*# sourceMappingURL=style1.css.map */

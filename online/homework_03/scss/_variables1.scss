@@ -1,0 +1,26 @@
+$bodyBackgroundColor: #dcbb9a;
+$bordersHeadersColor: #893c00;
+$contentBackgroundColor: #ffffff;
+
+$briefColor: #fadcba;
+
+$tableHeadColor: #e0e0e0;
+$tableBodyColor: #ffffff;
+$tableHeadBorder: 1px solid $tableBodyColor;
+$tableBodyBorder: 1px solid $tableHeadColor;
+
+$formColor: $tableHeadColor;
+$referencesColor: #3d70a1;
+
+$imgBorder: 2px solid $bordersHeadersColor;
+$imgPadding: 2px;
+$imgMarginLeft: 0 15px 10px 0;
+$imgMarginRight: 0 0 0 15px;
+$imgFloatLeft: left;
+$imgFloatRight: right;
+
+$briefBgColor: $briefColor;
+$briefDisplay: block;
+$briefFloat: left;
+$briefWidth: 385px;
+$briefMaring:  0 15px 0 0;

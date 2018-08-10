@@ -1,0 +1,68 @@
+@import "variables";
+
+//MIXINS
+.mixin-spacing(@margin, @padding) {
+	margin: @margin;
+	padding: @padding;
+}
+
+.mixin-tile(@color) {
+	border: 1px solid @color;
+	background: @color;
+	.tile-description {
+		color: @white;
+		.mixin-spacing(@tileDescriptionMargin, @tileDescriptionPadding)
+	}
+}
+
+//MAIN STYLE
+.navbar .navbar-nav {
+	.nav-link {
+		.mixin-spacing(@navItemMargin, @navItemPadding)
+	}
+    .active {
+        & > .nav-link {
+			background: @blue;
+			color: @white;
+        }
+	}
+}
+
+.heading, .main-heading {
+	color: @blue;
+}
+
+.main-heading {
+	border-bottom: 1px solid @blue;
+	.mixin-spacing(@headingMargin, @headingPadding);
+}
+
+.tile-link {
+	&:hover {
+		text-decoration: none;
+	}
+	.tile {
+		text-align: center;
+		.tile-img, .tile-description {
+			width: 100%;
+		}
+	}
+	.red {
+		.mixin-tile(@red);
+	}
+	.blue {
+		.mixin-tile(@blue);
+	}
+	.orange {
+		.mixin-tile(@orange);
+	}
+	.green {
+		.mixin-tile(@green);
+	}
+}
+
+.footer-description {
+	.mixin-spacing(@footerMargin, @footerPadding);
+	background: @grey;
+	color: @white;
+}

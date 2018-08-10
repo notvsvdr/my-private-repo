@@ -1,0 +1,21 @@
+.exercise {
+    display: block;
+    border-bottom: 1px solid #dadada;
+}
+
+.exercise-element {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.exercise-element button {
+    margin: 5px;
+}
+
+.exercise-element input {
+    width: 130px;
+    margin: auto;
+    text-align: center;
+}

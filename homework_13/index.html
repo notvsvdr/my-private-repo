@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW_13</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-app="blog" ng-controller="ctrl">
+
+    <h1 class="main-heading">My Blog</h1>
+    <div class="posts-container">
+        <div ng-repeat="post in postsToDisplay | filter:{title: test}">
+            <div class="post">
+                <img class="photo" src={{post.photo}} alt="">
+                <h2 ng-show="!editActive" class="heading">{{post.title}}</h2>
+                <div ng-show="editActive">
+                    <label for="">Title: </label>
+                    <input type="text" ng-model="post.title">
+                </div>
+                <span ng-show="!editActive" ng-repeat="category in post.categories track by $index" class="tags">{{category}}</span>
+                <div ng-show="editActive" class="categories">
+                    <label for="">Categories: </label>
+                    <input type="text" ng-model="post.categories">
+                </div>
+                <p ng-show="!editActive" class="description">{{post.description}}</p>
+                <div ng-show="editActive">
+                    <label for="">Description: </label>
+                    <textarea name="text" id="ta" cols="100" rows="10" ng-model="post.description"></textarea>
+                </div>
+
+                <p ng-show="editingFalse" class="post-error">Fill in all fields</p>
+                <p class="post-button" ng-click="editActive=!editActive" ng-show="!editActive">Edit</p>
+                <p class="post-button" ng-click="(post.title && post.description && post.categories) ? editPost(post): editingFalse=!editingFalse"
+                    ng-show="editActive">Save</p>
+            </div>
+        </div>
+
+        <div class="add-postdata">
+            <button ng-click="addPostActive=!addPostActive" ng-show="!addPostActive">Add Post</button>
+            <div ng-show="addPostActive">
+                <h3>Add Data</h3>
+                <form ng-submit="addPost()">
+                    <div class="field">
+                        <label for="title">Title: </label>
+                        <input id="title" type="text" placeholder="title" ng-model="newTitle">
+                    </div>
+                    <div class="field">
+                        <label for="description">Description: </label>
+                        <input id="description" type="text" placeholder="description" ng-model="newDescription">
+                    </div>
+                    <div class="field">
+                        <label for="categories">Categories: </label>
+                        <input id="categories" type="text" placeholder="categories" ng-model="newCategories">
+                    </div>
+                    <div class="field">
+                        <label for="photo">Photo: </label>
+                        <input id="photo" type="text" placeholder="photo1.jpg" ng-model="newPhoto">
+                    </div>
+                    <div class="action">
+                        <p ng-show="errorActive" class="error">Fill in all fields</p>
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="categories-container">
+        <h3>Categories</h3>
+        <ul>
+            <li ng-repeat="category in categories" ng-click="filterPosts(category)">{{category}}</li>
+        </ul>
+        <h3>Search by title</h3>
+        <input type="text" ng-model="test">
+    </div>
+
+
+
+
+
+    <script src="lib/angular.min.js"></script>
+    <script src="src/data.js"></script>
+    <script src="src/app.js"></script>
+
+</body>
+
+</html>

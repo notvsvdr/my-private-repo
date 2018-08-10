@@ -1,0 +1,15 @@
+<h1>Epam Front End Lab 8</h1>
+
+<div class="main-container">
+    <button class="add-button" (click)="addExercise()">Add</button>
+    <div class="headers">
+        <div class="columns-header">#</div>
+        <div class="columns-header">Topic</div>
+        <div class="columns-header">Date</div>
+        <div class="columns-header">Lecturer</div>
+        <div class="columns-header">Actions</div>
+    </div>
+    <div *ngFor="let exercise of exercises">
+        <app-class-component [exercise]="exercise" (deleteExercise)="deleteExercise($event)"></app-class-component>
+    </div>
+</div>

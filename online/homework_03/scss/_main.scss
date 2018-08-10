@@ -1,0 +1,132 @@
+$bodyBackgroundColor: null!default;
+$bordersHeadersColor: null!default;
+$contentBackgroundColor: null!default;
+$briefColor: null!default;
+$tableHeadColor: null!default;
+$tableBodyColor: null!default;
+$tableHeadBorder: null!default;
+$tableBodyBorder: null!default;
+$formColor: null!default;
+$referencesColor: null!default;
+
+@mixin image ($border, $padding, $margin, $float) {
+  border: $border;
+  padding: $padding;
+  margin: $margin;
+  float: $float;
+}
+
+@mixin brief ($bgColor, $display, $float, $width, $margin) {
+  background-color: $bgColor;
+  display: $display;
+  float: $float;
+  width: $width;
+  margin: $margin;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bodyBackgroundColor;
+
+  #content {
+    width: 960px;
+    margin: 10px auto;
+    padding: 5px 20px;
+    background-color: $contentBackgroundColor;
+
+    h1 {
+      text-align: center;
+      color: $bordersHeadersColor;
+    }
+
+    h2 {
+      color: $bordersHeadersColor;
+    }
+
+    a {
+      color: $referencesColor;
+    }
+
+    img {
+      &.img-left {
+        @include image($imgBorder, $imgPadding, $imgMarginLeft, $imgFloatLeft);
+      }
+
+      &.img-right {
+        @include image($imgBorder, $imgPadding, $imgMarginRight, $imgFloatRight);
+      }
+    }
+
+    .brief {
+      @include brief($briefBgColor, $briefDisplay, $briefFloat, $briefWidth, $briefMaring);
+      padding: 20px;
+    }
+
+    table {
+      width: 95%;
+      text-align: left;
+      border-collapse: collapse;
+
+      caption {
+        text-align: right;
+      }
+
+      tr {
+        th {
+          text-transform: uppercase;
+          font-weight: normal;
+          background-color: $tableHeadColor;
+          padding: 12px 15px;
+          border-right: $tableHeadBorder;
+        }
+
+        th:nth-child(3) {
+          border-right: none;
+        }
+  
+        td {
+          border-bottom: $tableBodyBorder;
+          background-color: $tableBodyColor;
+          padding: 12px 15px;
+          a {
+            color: $referencesColor;
+          }
+        }
+      }
+    }
+
+    form {
+      color: $formColor;
+      input, textarea {
+        width: 100%;
+        border: 1px solid $formBordersColor;
+        padding: 5px;
+        margin: 5px 0;
+      }
+      
+      #usernameData {
+        width: 100%;
+
+        #firstName {
+          width: 48%;
+          display: inline-block;
+        }
+
+        #lastName {
+          @extend #firstName;
+          margin-left: 34px;
+        }
+      }
+
+      button {
+        margin: 15px 0;
+        padding: 10px 60px;
+        font-size: 1.5em;
+        color: $referencesColor;
+        border: 1px solid $referencesColor;
+        background-color: $contentBackgroundColor;
+      }
+    }
+  }
+}

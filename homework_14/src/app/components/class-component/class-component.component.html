@@ -1,0 +1,29 @@
+<div class="exercise">
+    <div class="exercise-element">
+        <div>{{exercise.id}}</div>
+    </div>
+    <div class="exercise-element">
+        <div *ngIf="!editing">{{exercise.topic}}</div>
+        <div *ngIf="editing">
+            <input type="text" [(ngModel)]="exercise.topic" placeholder="exercise.topic">
+        </div>
+    </div>
+    <div class="exercise-element">
+        <div *ngIf="!editing">{{exercise.date}}</div>
+        <div *ngIf="editing">
+            <input type="text" [(ngModel)]="exercise.date" placeholder="exercise.date">
+        </div>
+    </div>
+    <div class="exercise-element">
+        <div *ngIf="!editing">{{exercise.lecturer}}</div>
+        <div *ngIf="editing">
+            <input type="text" [(ngModel)]="exercise.lecturer" placeholder="exercise.lecturer">
+        </div>
+    </div>
+    <div class="exercise-element">
+        <button *ngIf="!editing" (click)="editExercise()" class="exercise-button">Edit</button>
+        <button *ngIf="!editing" (click)="removeExercise(exercise)" class="exercise-button">Remove</button>
+        <button *ngIf="editing" (click)="editExercise()">Save</button>
+        <button *ngIf="editing" (click)="discardExerciseEdit()">Discard</button>
+    </div>
+</div>
